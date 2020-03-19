@@ -29,7 +29,7 @@ function renderCafe(doc){
 }
 
 // getting data
-db.collection('cafes').where('city','==','Marioland').get().then((snapshot) => {
+db.collection('cafes').where('city','==','manchester').orderBy('name').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         renderCafe(doc);
     });
