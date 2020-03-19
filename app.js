@@ -58,3 +58,8 @@ db.collection('cafes').orderBy('city').onSnapshot(snapshot => {
         }
     })
 })
+
+//Updating Data
+db.collection('cafes').doc('YoVo5OzFYiBwvZ9B1Z3M').update({ name: 'Wario´s Wonderland'});
+//Tener cuidado con .set() en lugar de .update() ya que el primero sobreescribe
+//el documento.
